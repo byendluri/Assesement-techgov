@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200730 13:51:14.922" generator="Robot 3.2.1 (Python 2.7.16 on darwin)">
+<suite source="/Users/bhargavayendluri/proposal.robot" id="s1" name="Proposal">
+<test id="s1-t1" name="Submit Proposal Details">
+<kw name="Open Browser To Login Page" library="testkeywords">
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>${TITLE}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGINURL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:15.087" level="INFO">Opening browser 'Chrome' to base url 'https://bgp-qa.gds-gov.tech'.</msg>
+<status status="PASS" endtime="20200730 13:51:17.280" starttime="20200730 13:51:15.087"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:17.280" starttime="20200730 13:51:15.086"></status>
+</kw>
+<kw name="Perform Initial Login" library="testkeywords">
+<kw name="Execute Manual Step" library="Dialogs">
+<doc>Pauses test execution until user sets the keyword status.</doc>
+<arguments>
+<arg>Complete Login</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:26.018" starttime="20200730 13:51:17.281"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:26.018" starttime="20200730 13:51:17.281"></status>
+</kw>
+<kw name="Click on GrantLoginButton" library="testkeywords">
+<arguments>
+<arg>${LoginWithCorpPass}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${MYGRANTLOGIN}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:26.032" level="INFO">Current page contains element '//div[@class='bgp-btn bgp-btn-loginCorpPass margin-top-sm margin-btm-md']'.</msg>
+<status status="PASS" endtime="20200730 13:51:26.032" starttime="20200730 13:51:26.019"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MYGRANTLOGIN}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:26.032" level="INFO">Clicking element '//div[@class='bgp-btn bgp-btn-loginCorpPass margin-top-sm margin-btm-md']'.</msg>
+<status status="PASS" endtime="20200730 13:51:26.409" starttime="20200730 13:51:26.032"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:26.409" starttime="20200730 13:51:26.018"></status>
+</kw>
+<kw name="Perform MyGrant Login" library="testkeywords">
+<arguments>
+<arg>${NRICLOCATOR}</arg>
+<arg>${FULLNAMELOCATOR}</arg>
+<arg>${UENLOCATOR}</arg>
+<arg>${ROLELOCATOR}</arg>
+<arg>${LOGINBUTTONLOCATOR}</arg>
+<arg>${NRICVALUE}</arg>
+<arg>${FULLNAMEVALUE}</arg>
+<arg>${UENVALUE}</arg>
+<arg>{ROLEVALUE}</arg>
+</arguments>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${NRICTEXT}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:26.432" level="INFO">Current page contains text field '//input[@placeholder='NRIC']'.</msg>
+<status status="PASS" endtime="20200730 13:51:26.433" starttime="20200730 13:51:26.411"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${NRICTEXT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:26.469" starttime="20200730 13:51:26.433"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${NRICTEXT}</arg>
+<arg>${NRICVAL}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:26.470" level="INFO">Typing text 'public' into text field '//input[@placeholder='NRIC']'.</msg>
+<status status="PASS" endtime="20200730 13:51:26.564" starttime="20200730 13:51:26.470"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${NAMETEXT}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:26.582" level="INFO">Current page contains text field '//input[@placeholder='Name']'.</msg>
+<status status="PASS" endtime="20200730 13:51:26.582" starttime="20200730 13:51:26.564"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${NAMETEXT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:26.612" starttime="20200730 13:51:26.582"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${NAMETEXT}</arg>
+<arg>${NAMEVAL}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:26.612" level="INFO">Typing text 'Tan Ah Kow' into text field '//input[@placeholder='Name']'.</msg>
+<status status="PASS" endtime="20200730 13:51:26.665" starttime="20200730 13:51:26.612"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${UENTEXT}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:26.682" level="INFO">Current page contains text field '//input[@placeholder='UEN']'.</msg>
+<status status="PASS" endtime="20200730 13:51:26.682" starttime="20200730 13:51:26.666"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${UENTEXT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:26.713" starttime="20200730 13:51:26.683"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UENTEXT}</arg>
+<arg>${UENVAL}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:26.714" level="INFO">Typing text 'BGPQEDEMO' into text field '//input[@placeholder='UEN']'.</msg>
+<status status="PASS" endtime="20200730 13:51:26.769" starttime="20200730 13:51:26.713"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGINBUTTON}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:26.770" level="INFO">Clicking button '//form[2]//button[1]'.</msg>
+<status status="PASS" endtime="20200730 13:51:27.057" starttime="20200730 13:51:26.769"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:27.058" starttime="20200730 13:51:26.410"></status>
+</kw>
+<kw name="Click On Get New Grant Form button in the MyGrant Dashboard" library="testkeywords">
+<arguments>
+<arg>${GETNEWGRANTBUTTON}</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${GETGRANTFORMBUTTON}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:31.346" starttime="20200730 13:51:27.058"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${GETGRANTFORMBUTTON}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:31.347" level="INFO">Clicking element '//a[@id='dashboard-menubox-app-apply-grant']//div[@class='dashboard-action-card']'.</msg>
+<status status="PASS" endtime="20200730 13:51:31.480" starttime="20200730 13:51:31.346"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:31.480" starttime="20200730 13:51:27.058"></status>
+</kw>
+<kw name="Click On Get New Grant Form button in the MyGrant Dashboard" library="testkeywords">
+<arguments>
+<arg>${ITLOCATOR}</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${GETGRANTFORMBUTTON}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:31.738" starttime="20200730 13:51:31.481"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${GETGRANTFORMBUTTON}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:31.739" level="INFO">Clicking element '//div[contains(text(),'IT')]'.</msg>
+<status status="PASS" endtime="20200730 13:51:31.791" starttime="20200730 13:51:31.738"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:31.791" starttime="20200730 13:51:31.481"></status>
+</kw>
+<kw name="Click On Get New Grant Form button in the MyGrant Dashboard" library="testkeywords">
+<arguments>
+<arg>${BRINGMYBUSINESS}</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${GETGRANTFORMBUTTON}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:31.812" starttime="20200730 13:51:31.792"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${GETGRANTFORMBUTTON}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:31.812" level="INFO">Clicking element '//div[contains(text(),'Bring my business overseas or establish a stronger')]'.</msg>
+<status status="PASS" endtime="20200730 13:51:31.857" starttime="20200730 13:51:31.812"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:31.857" starttime="20200730 13:51:31.791"></status>
+</kw>
+<kw name="Choose a Functional Area" library="testkeywords">
+<arguments>
+<arg>${MRALOCATOR}</arg>
+<arg>${SETTIMEOUT}</arg>
+<arg>${FUNCTIONALAREAAPPLYBUTTON}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${FUNCTIONALAREALOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:31.868" starttime="20200730 13:51:31.858"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${FUNCTIONALAREALOCATOR}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:31.869" level="INFO">Clicking element '//div[contains(text(),'Market Readiness Assistance')]'.</msg>
+<status status="PASS" endtime="20200730 13:51:31.908" starttime="20200730 13:51:31.869"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${NEXTBUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:31.931" starttime="20200730 13:51:31.908"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEXTBUTTON}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:31.932" level="INFO">Clicking element '//button[@id='go-to-grant']'.</msg>
+<status status="PASS" endtime="20200730 13:51:31.970" starttime="20200730 13:51:31.931"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:31.971" starttime="20200730 13:51:31.857"></status>
+</kw>
+<kw name="Click On Proceed Button in the Application Form Page" library="testkeywords">
+<arguments>
+<arg>${APPLICATIONFORMVALIDATIONTEXT}</arg>
+<arg>${APPLICATIONFORMPROCEEDBUTTON}</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${PROCEEDBUTTON}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:32.602" starttime="20200730 13:51:31.972"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${PAGEVALIDATIONTEXT}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:32.615" level="INFO">Current page contains text 'Complete your grant application'.</msg>
+<status status="PASS" endtime="20200730 13:51:32.615" starttime="20200730 13:51:32.602"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${PROCEEDBUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:32.631" starttime="20200730 13:51:32.615"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PROCEEDBUTTON}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:32.631" level="INFO">Clicking element '//button[@id='keyPage-form-button']'.</msg>
+<status status="PASS" endtime="20200730 13:51:32.845" starttime="20200730 13:51:32.631"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:32.845" starttime="20200730 13:51:31.971"></status>
+</kw>
+<kw name="Submit the Eligibility Form With all Checked with Yes" library="testkeywords">
+<arguments>
+<arg>${REGISTEREDINSINGAPOREYES}</arg>
+<arg>${GROUPSALESYES}</arg>
+<arg>${LOCALEQUITYYES}</arg>
+<arg>${TARGETMARKETYES}</arg>
+<arg>${MUTLIPLESTATEMENTYES}</arg>
+<arg>${ELIGIBILITYNEXTBUTTON}</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${REGISTEREDLOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:33.076" starttime="20200730 13:51:32.847"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${REGISTEREDLOCATOR}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:33.077" level="INFO">Clicking element '//div[4]//div[1]//div[2]//label[1]//span[1]'.</msg>
+<status status="PASS" endtime="20200730 13:51:33.126" starttime="20200730 13:51:33.077"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${GROUPSALESLOCATOR}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:33.127" level="INFO">Clicking element '//div[5]//div[1]//div[2]//label[1]//span[1]'.</msg>
+<status status="PASS" endtime="20200730 13:51:33.194" starttime="20200730 13:51:33.126"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOCALEQUITYLOCATOR}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:33.195" level="INFO">Clicking element '//div[6]//div[1]//div[2]//label[1]'.</msg>
+<status status="PASS" endtime="20200730 13:51:33.268" starttime="20200730 13:51:33.195"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TARGETMARKETLOCATOR}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:33.268" level="INFO">Clicking element '//div[7]//div[1]//div[2]//label[1]'.</msg>
+<status status="PASS" endtime="20200730 13:51:33.313" starttime="20200730 13:51:33.268"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MULTIPLELOCATOR}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:33.313" level="INFO">Clicking element '//div[8]//div[1]//div[2]//label[1]'.</msg>
+<status status="PASS" endtime="20200730 13:51:33.366" starttime="20200730 13:51:33.313"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEXTBUTTON}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:33.367" level="INFO">Clicking element '//button[@id='next-btn']'.</msg>
+<status status="PASS" endtime="20200730 13:51:33.426" starttime="20200730 13:51:33.366"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:33.427" starttime="20200730 13:51:32.846"></status>
+</kw>
+<kw name="Enter Name Field in the Contact Details Page" library="testkeywords">
+<arguments>
+<arg>${CONTACTNAME}</arg>
+<arg>Bhargav</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${CONTACTLOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:33.857" starttime="20200730 13:51:33.428"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CONTACTLOCATOR}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:33.857" level="INFO">Typing text 'Bhargav' into text field '//input[@id='react-contact_info-name']'.</msg>
+<status status="PASS" endtime="20200730 13:51:33.975" starttime="20200730 13:51:33.857"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:33.976" starttime="20200730 13:51:33.427"></status>
+</kw>
+<kw name="Enter Job Title Field in the Contact Details Page" library="testkeywords">
+<arguments>
+<arg>${CONTACTJOBTITLE}</arg>
+<arg>QA</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${CONTACTLOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:33.988" starttime="20200730 13:51:33.977"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CONTACTLOCATOR}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:33.988" level="INFO">Typing text 'QA' into text field '//input[@id='react-contact_info-designation']'.</msg>
+<status status="PASS" endtime="20200730 13:51:34.079" starttime="20200730 13:51:33.988"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:34.079" starttime="20200730 13:51:33.976"></status>
+</kw>
+<kw name="Enter Contact Number Field in the Contact Details Page" library="testkeywords">
+<arguments>
+<arg>${CONTACTNUMBER}</arg>
+<arg>86850046</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${CONTACTLOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:34.091" starttime="20200730 13:51:34.080"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CONTACTLOCATOR}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:34.092" level="INFO">Typing text '86850046' into text field '//input[@id='react-contact_info-phone']'.</msg>
+<status status="PASS" endtime="20200730 13:51:34.203" starttime="20200730 13:51:34.091"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:34.203" starttime="20200730 13:51:34.080"></status>
+</kw>
+<kw name="Enter Email Field in the Contact Details Page" library="testkeywords">
+<arguments>
+<arg>${CONTACTPRIMARYEMAIL}</arg>
+<arg>byendluri@gmail.com</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${CONTACTLOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:34.217" starttime="20200730 13:51:34.204"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CONTACTLOCATOR}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:34.218" level="INFO">Typing text 'byendluri@gmail.com' into text field '//input[@id='react-contact_info-primary_email']'.</msg>
+<status status="PASS" endtime="20200730 13:51:34.388" starttime="20200730 13:51:34.217"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:34.388" starttime="20200730 13:51:34.203"></status>
+</kw>
+<kw name="Select Same As Registered Address Check Box" library="testkeywords">
+<arguments>
+<arg>${CONTACTREGISTERADDCHECKBOX}</arg>
+</arguments>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${REGISTEREDADDCHECKBOX}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:34.389" level="INFO">Selecting checkbox '//input[@id='react-contact_info-correspondence_address-copied']'.</msg>
+<status status="PASS" endtime="20200730 13:51:34.475" starttime="20200730 13:51:34.389"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:34.475" starttime="20200730 13:51:34.389"></status>
+</kw>
+<kw name="Select Same As Main Contact Check Box" library="testkeywords">
+<arguments>
+<arg>${CONTACTMAINCONTACTCHECKBOX}</arg>
+</arguments>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${REGISTEREDADDCHECKBOX}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:34.476" level="INFO">Selecting checkbox '//input[@id='react-contact_info-copied']'.</msg>
+<status status="PASS" endtime="20200730 13:51:34.567" starttime="20200730 13:51:34.476"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:34.567" starttime="20200730 13:51:34.476"></status>
+</kw>
+<kw name="Click on the Next Button in the Contact Details Page" library="testkeywords">
+<arguments>
+<arg>${CONTACTNEXTBUTTON}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEXTBUTTON}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:34.569" level="INFO">Clicking element '//button[@id='next-btn']'.</msg>
+<status status="PASS" endtime="20200730 13:51:34.634" starttime="20200730 13:51:34.568"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:34.634" starttime="20200730 13:51:34.568"></status>
+</kw>
+<kw name="Enter Project Title in the Proposal Page" library="testkeywords">
+<arguments>
+<arg>${PROJECTTILE}</arg>
+<arg>Bhargav Trade</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${PROJECTTILELOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:35.068" starttime="20200730 13:51:34.635"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PROJECTTILELOCATOR}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:35.068" level="INFO">Typing text 'Bhargav Trade' into text field '//input[@id='react-project-title']'.</msg>
+<status status="PASS" endtime="20200730 13:51:35.207" starttime="20200730 13:51:35.068"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:35.207" starttime="20200730 13:51:34.634"></status>
+</kw>
+<kw name="Enter Start Date in the Proposal Page" library="testkeywords">
+<arguments>
+<arg>${STARTDATE}</arg>
+<arg>01 Aug 2020</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${STARTDATELOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:35.220" starttime="20200730 13:51:35.208"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${STARTDATELOCATOR}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:35.221" level="INFO">Typing text '01 Aug 2020' into text field '//input[@id='react-project-start_date']'.</msg>
+<status status="PASS" endtime="20200730 13:51:35.407" starttime="20200730 13:51:35.221"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:35.407" starttime="20200730 13:51:35.207"></status>
+</kw>
+<kw name="Enter End Date in the Proposal Page" library="testkeywords">
+<arguments>
+<arg>${ENDDATE}</arg>
+<arg>31 Dec 2020</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${ENDDATELOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:35.432" starttime="20200730 13:51:35.408"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ENDDATELOCATOR}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:35.433" level="INFO">Typing text '31 Dec 2020' into text field '//input[@id='react-project-end_date']'.</msg>
+<status status="PASS" endtime="20200730 13:51:35.635" starttime="20200730 13:51:35.433"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:35.636" starttime="20200730 13:51:35.408"></status>
+</kw>
+<kw name="Enter Project Description in the Proposal page" library="testkeywords">
+<arguments>
+<arg>${PROJECTDESCRIPTION}</arg>
+<arg>Bhargav Project for QA</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${PROJECTDESCLOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:35.661" starttime="20200730 13:51:35.637"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PROJECTDESCLOCATOR}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:35.662" level="INFO">Typing text 'Bhargav Project for QA' into text field '//textarea[@id='react-project-description']'.</msg>
+<status status="PASS" endtime="20200730 13:51:35.848" starttime="20200730 13:51:35.662"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:35.848" starttime="20200730 13:51:35.636"></status>
+</kw>
+<kw name="Select the Target Market Radio Button" library="testkeywords">
+<arguments>
+<arg>${RADIOBUTTONYES}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${RADIOBUTTONLOCATOR}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:35.849" level="INFO">Clicking element '//div[@class='controls bgp-radio-text-format']//label[1]'.</msg>
+<status status="PASS" endtime="20200730 13:51:35.917" starttime="20200730 13:51:35.849"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:35.917" starttime="20200730 13:51:35.848"></status>
+</kw>
+<kw name="Upload the Document" library="testkeywords">
+<arguments>
+<arg>${ATTACHFILES}</arg>
+<arg>//Downloads//screenshot.png</arg>
+</arguments>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>${UPLOADLOCATOR}</arg>
+<arg>${FILENAME}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:35.918" level="INFO">Sending //Downloads/screenshot.png to browser.</msg>
+<status status="PASS" endtime="20200730 13:51:35.992" starttime="20200730 13:51:35.918"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:35.993" starttime="20200730 13:51:35.917"></status>
+</kw>
+<kw name="Click on Next Button in the Proposal Page" library="testkeywords">
+<arguments>
+<arg>${PROPOSALNEXTBUTTON}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEXTBUTTON}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:35.994" level="INFO">Clicking element '//button[@id='next-btn']'.</msg>
+<status status="PASS" endtime="20200730 13:51:36.054" starttime="20200730 13:51:35.993"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:36.055" starttime="20200730 13:51:35.993"></status>
+</kw>
+<kw name="Enter Financial Year End Date" library="testkeywords">
+<arguments>
+<arg>${FYEAREND}</arg>
+<arg>31 Dec 2020</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${YEARENDLOCATOR}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:36.485" starttime="20200730 13:51:36.056"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${YEARENDLOCATOR}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:36.486" level="INFO">Clicking element '//input[@id='react-project_impact-fy_end_date_0']'.</msg>
+<status status="PASS" endtime="20200730 13:51:36.538" starttime="20200730 13:51:36.485"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${YEARENDLOCATOR}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:36.539" level="INFO">Typing text '31 Dec 2020' into text field '//input[@id='react-project_impact-fy_end_date_0']'.</msg>
+<status status="PASS" endtime="20200730 13:51:36.665" starttime="20200730 13:51:36.538"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:36.665" starttime="20200730 13:51:36.055"></status>
+</kw>
+<kw name="Enter Overseas Sales Details" library="testkeywords">
+<arguments>
+<arg>${OVERSEASSALES1}</arg>
+<arg>${OVERSEASSALES2}</arg>
+<arg>${OVERSEASSALES3}</arg>
+<arg>${OVERSEASSALES4}</arg>
+<arg>100000</arg>
+<arg>200000</arg>
+<arg>3000000</arg>
+<arg>4000000</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${QTR1}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:36.681" starttime="20200730 13:51:36.666"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR1}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:36.682" level="INFO">Clicking element '//input[@id='react-project_impact-overseas_sales_0']'.</msg>
+<status status="PASS" endtime="20200730 13:51:36.729" starttime="20200730 13:51:36.682"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR1}</arg>
+<arg>${VALUE1}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:36.729" level="INFO">Typing text '100000' into text field '//input[@id='react-project_impact-overseas_sales_0']'.</msg>
+<status status="PASS" endtime="20200730 13:51:36.812" starttime="20200730 13:51:36.729"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR2}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:36.813" level="INFO">Clicking element '//input[@id='react-project_impact-overseas_sales_1']'.</msg>
+<status status="PASS" endtime="20200730 13:51:36.870" starttime="20200730 13:51:36.812"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR2}</arg>
+<arg>${VALUE2}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:36.871" level="INFO">Typing text '200000' into text field '//input[@id='react-project_impact-overseas_sales_1']'.</msg>
+<status status="PASS" endtime="20200730 13:51:36.946" starttime="20200730 13:51:36.870"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR3}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:36.946" level="INFO">Clicking element '//input[@id='react-project_impact-overseas_sales_2']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.006" starttime="20200730 13:51:36.946"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR3}</arg>
+<arg>${VALUE3}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.006" level="INFO">Typing text '3000000' into text field '//input[@id='react-project_impact-overseas_sales_2']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.096" starttime="20200730 13:51:37.006"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR4}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.096" level="INFO">Clicking element '//input[@id='react-project_impact-overseas_sales_3']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.161" starttime="20200730 13:51:37.096"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR4}</arg>
+<arg>${VALUE4}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.161" level="INFO">Typing text '4000000' into text field '//input[@id='react-project_impact-overseas_sales_3']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.248" starttime="20200730 13:51:37.161"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:37.248" starttime="20200730 13:51:36.665"></status>
+</kw>
+<kw name="Enter Overseas Investments Details" library="testkeywords">
+<arguments>
+<arg>${OVERSEASINVESTMENTS1}</arg>
+<arg>${OVERSEASINVESTMENTS2}</arg>
+<arg>${OVERSEASINVESTMENTS3}</arg>
+<arg>${OVERSEASINVESTMENTS4}</arg>
+<arg>25000</arg>
+<arg>64000</arg>
+<arg>48000</arg>
+<arg>50000</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${QTR1}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:37.262" starttime="20200730 13:51:37.249"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR1}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.263" level="INFO">Clicking element '//input[@id='react-project_impact-overseas_investments_0']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.314" starttime="20200730 13:51:37.263"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR1}</arg>
+<arg>${VALUE1}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.314" level="INFO">Typing text '25000' into text field '//input[@id='react-project_impact-overseas_investments_0']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.394" starttime="20200730 13:51:37.314"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR2}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.395" level="INFO">Clicking element '//input[@id='react-project_impact-overseas_investments_1']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.445" starttime="20200730 13:51:37.394"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR2}</arg>
+<arg>${VALUE2}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.445" level="INFO">Typing text '64000' into text field '//input[@id='react-project_impact-overseas_investments_1']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.522" starttime="20200730 13:51:37.445"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR3}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.522" level="INFO">Clicking element '//input[@id='react-project_impact-overseas_investments_2']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.581" starttime="20200730 13:51:37.522"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR3}</arg>
+<arg>${VALUE3}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.582" level="INFO">Typing text '48000' into text field '//input[@id='react-project_impact-overseas_investments_2']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.660" starttime="20200730 13:51:37.581"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR4}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.661" level="INFO">Clicking element '//input[@id='react-project_impact-overseas_investments_3']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.713" starttime="20200730 13:51:37.660"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${QTR4}</arg>
+<arg>${VALUE4}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.714" level="INFO">Typing text '50000' into text field '//input[@id='react-project_impact-overseas_investments_3']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.785" starttime="20200730 13:51:37.713"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:37.785" starttime="20200730 13:51:37.248"></status>
+</kw>
+<kw name="Enter Rationale For Projections" library="testkeywords">
+<arguments>
+<arg>${PROJECTIONRATIONALE}</arg>
+<arg>This is a Test Project</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${RATIONALEPROJECTIONS}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.786" level="INFO">Clicking element '//textarea[@id='react-project_impact-rationale_remarks']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.835" starttime="20200730 13:51:37.786"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${RATIONALEPROJECTIONS}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.836" level="INFO">Typing text 'This is a Test Project' into text field '//textarea[@id='react-project_impact-rationale_remarks']'.</msg>
+<status status="PASS" endtime="20200730 13:51:37.994" starttime="20200730 13:51:37.836"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:37.994" starttime="20200730 13:51:37.785"></status>
+</kw>
+<kw name="Enter Non Tangible Benefits" library="testkeywords">
+<arguments>
+<arg>${NONTANGILEBENEFITS}</arg>
+<arg>This is a Test Project</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TANGIBLEBENEFITS}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:37.995" level="INFO">Clicking element '//textarea[@id='react-project_impact-benefits_remarks']'.</msg>
+<status status="PASS" endtime="20200730 13:51:38.045" starttime="20200730 13:51:37.995"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TANGIBLEBENEFITS}</arg>
+<arg>${VALUE}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:38.045" level="INFO">Typing text 'This is a Test Project' into text field '//textarea[@id='react-project_impact-benefits_remarks']'.</msg>
+<status status="PASS" endtime="20200730 13:51:38.197" starttime="20200730 13:51:38.045"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:38.198" starttime="20200730 13:51:37.994"></status>
+</kw>
+<kw name="Click Next Button" library="testkeywords">
+<arguments>
+<arg>${NEXTBUTTON}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEXTBUTTON}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:38.199" level="INFO">Clicking element '//button[@id='next-btn']'.</msg>
+<status status="PASS" endtime="20200730 13:51:38.271" starttime="20200730 13:51:38.198"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:38.272" starttime="20200730 13:51:38.198"></status>
+</kw>
+<kw name="Click on Third Party Vendors" library="testkeywords">
+<arguments>
+<arg>${THIRDPARTYVENDORS}</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${THIRDPARTY}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:38.698" starttime="20200730 13:51:38.273"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${THIRDPARTY}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:38.698" level="INFO">Clicking element '//div[@id='react-project_cost-vendors-accordion-header']'.</msg>
+<status status="PASS" endtime="20200730 13:51:38.744" starttime="20200730 13:51:38.698"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:38.744" starttime="20200730 13:51:38.272"></status>
+</kw>
+<kw name="Click ADD ITEM Under Third Party" library="testkeywords">
+<arguments>
+<arg>${THIRDPARTADDITEM}</arg>
+<arg>${SETTIMEOUT}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${THIRDPARTYADD}</arg>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20200730 13:51:38.760" starttime="20200730 13:51:38.745"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${THIRDPARTYADD}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:38.760" level="INFO">Clicking element '//button[@id='react-project_cost-vendors-add-item']'.</msg>
+<status status="PASS" endtime="20200730 13:51:38.803" starttime="20200730 13:51:38.760"></status>
+</kw>
+<status status="PASS" endtime="20200730 13:51:38.803" starttime="20200730 13:51:38.745"></status>
+</kw>
+<kw name="Select Vendor Reguisterd option" library="testkeywords">
+<arguments>
+<arg>${VENDORREGISTEROVS}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${REGISTEREDLOCATION}</arg>
+</arguments>
+<msg timestamp="20200730 13:51:38.804" level="INFO">Clicking element '//body//label[2]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200730 13:51:39.353" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-50.png"&gt;&lt;img src="selenium-screenshot-50.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200730 13:51:39.353" starttime="20200730 13:51:38.817"></status>
+</kw>
+<msg timestamp="20200730 13:51:39.354" level="FAIL">Element with locator '//body//label[2]' not found.</msg>
+<status status="FAIL" endtime="20200730 13:51:39.354" starttime="20200730 13:51:38.804"></status>
+</kw>
+<status status="FAIL" endtime="20200730 13:51:39.354" starttime="20200730 13:51:38.803"></status>
+</kw>
+<status status="FAIL" endtime="20200730 13:51:39.355" critical="yes" starttime="20200730 13:51:15.086">Element with locator '//body//label[2]' not found.</status>
+</test>
+<doc>Sample Test to Open Browser</doc>
+<status status="FAIL" endtime="20200730 13:51:39.356" starttime="20200730 13:51:14.924"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Proposal" pass="0">Proposal</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
